@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /app
 COPY . .
+# Cho phép file có quyền chạy
 RUN chmod +x ./MinecraftClient
-CMD ["dotnet", "MinecraftClient.dll"]
+# Lệnh chạy trực tiếp file ứng dụng
+CMD ["./MinecraftClient"]
